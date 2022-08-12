@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <!--Font Imports-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Header-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <!--Body-->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <!--Data Stuff-->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
+    <link rel="stylesheet" href="Assets/style.css">
+    <script src="Assets/methods.js"></script>  
+  </head>
+  <body style="overflow-x:hidden">
+    <!-- Side navigation -->
+    <div id = "CustomSideNav" class="Sidenav">
+        <a class="closebtn" onclick="CloseNav()">&times;</a>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a><!--You're already here! I'll reload for you though.-->
+        <a href="Projects/projects.html">Projects</a>
+        <a href="#Contact Me">Contact</a>
+    </div>
+    <a class="openbtn" onclick="OpenNav()"><div id="MenuOpen" style="display:inline">Menu</div> &#9776;</a>
+
+    <div>
+      <!--Content-->
+      <h1 style="font-size:50px;padding-left:50px;"><a href="#top">About Me</a></h1>
+      <div class="Content" style="margin-top:25px;padding-left:25px;min-height: 100%;">
+        <div id="ContentFF" class="ff" sticky="True" style="width:22%">
+          <div class="Title">Fast Facts</div>
+          <table>
+            <tr><div class="TableHeader"><b>College Year: </b>Junior</div></tr>
+            <tr><div class="TableHeader"><b>Degree Program: </b>CS/DSAS</div></tr>
+            <tr><div class="TableHeader"><b>Coding Experience: </b>5 yr</div></tr>
+            <tr><div class="TableHeader" style="border-bottom:none">
+              <b>Skills: </b>C#, Java, Excel, MS Office</div></tr>
+          </table>
+        </div>
+      </div>
+      <div>
+        <img src="Assets/Icon_Draft.png" 
+        style="float:left;width:25%;padding-left:50px;padding-right:25px;padding-bottom:25px;">
+        <p>Hi! I'm The-Architect01!</p>
+        <p>I am currently studing Computer Science and Data Science at Purdue University Fort Wayne. I currently work at Science Central.</p>
+        <p>I originally got started in programming through Excel in my junior year of High School. 
+          I developed a D&D character formatter (I have since updated this, found 
+          <a style="color:cadetblue;" href="Projects/Personal/playermaker/playermaker.html">here</a>) 
+          which introduced me to Excel's data validation, and VBA. In school, I learned Java and expanded into C# and Unity.
+        </p>
+        <p>So far I have specialized in game development primarily in Visual Basic and in C#, though I am eager to learn new languages and find new avenues.</p>
+      </div>
+      
+      <section id="Contact Me">
+        <h2 style="padding-left:40px">Contact Me</h2>
+        <a href="https://github.com/The-Architect01" target="_blank" style="padding-left:50px;text-decoration:none;font-size:22px;">
+        <img src="Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px;">GitHub</a> 
+      </section>
+    </div>
+    <footer>
+        <div class="Footer" style="margin-top:56px">&#169; 2022 The-Architect01</div>
+    </footer> 
+    <style>
+      p {
+        padding-top:5px;
+        width:60%;
+        padding-left: 25px;
+      }
+    </style>
+  </body>
+</html>

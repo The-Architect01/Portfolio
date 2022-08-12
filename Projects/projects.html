@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <!--Font Imports-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Header-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <!--Body-->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <!--Data Stuff-->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
+    <link rel="stylesheet" href="../Assets/style.css">
+    <link rel="stylesheet" href="search.css">
+    <script src="../Assets/methods.js"></script>  
+    <script src="search.js"></script>
+  </head>
+  <body >
+    <!-- Side navigation -->
+    <div id = "CustomSideNav" class="Sidenav">
+        <a class="closebtn" onclick="CloseNav()">&times;</a>
+        <a href="../home.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="projects.html">Projects</a><!--You're already here! I'll reload for you though.-->
+        <a href="../about.html#Contact Me">Contact</a>
+    </div>
+    <a class="openbtn" onclick="OpenNav()"><div id="MenuOpen" style="display:inline">Menu</div> &#9776;</a>
+    <a tag="Test,Testing"></a>
+    <div>
+    <!--Content-->
+    <h1 style="background-color:transparent;font-size:50px"><a href="#top">Projects</a></h1>
+    <div class="InputWrapper">
+        <b style="font-size:28px">Filters</b>
+        <input style="display:none;" type=text spellcheck="true" id="Test">
+        <div value="False" onclick="Toggle_Personal(this)" class="CheckBox">
+          <img id="Personal_Check" src="../Assets/Check_Empty.png" style="width:20px;height:20px;vertical-align:middle;padding-right:5px;">
+          Personal
+        </div>
+        <div value="False" onclick="Toggle_School(this)" class="CheckBox">
+          <img id="School_Check" src="../Assets/Check_Empty.png" style="width:20px;height:20px;vertical-align:middle;padding-right:5px;">
+          School
+        </div>
+        <div value="False" onclick="Toggle_C3(this)" class="CheckBox">
+          <img id="C#_Check" src="../Assets/Check_Empty.png" style="width:20px;height:20px;vertical-align:middle;padding-right:5px;">
+          C#
+        </div>
+        <div value="False" onclick="Toggle_Java(this)" class="CheckBox">
+          <img id="Java_Check" src="../Assets/Check_Empty.png" style="width:20px;height:20px;vertical-align:middle;padding-right:5px;">
+          Java
+        </div>
+        <!--<button class="toggle" value="True" onclick="Toggle_Personal(this)">Personal</button>
+        <button class="toggle" value="True" onclick="Toggle_School(this)">School</button>
+        <button class="toggle" value="True" onclick="Toggle_C3(this)">C#</button>
+        <button class="toggle" value="True" onclick="Toggle_Java(this)">Java</button>-->
+    </div>
+    <div class="cardDisplay">
+      <div class="card" tags="School,Java" style="background-color:#F3DF6C;">
+        <a href="CS 161/honors.html">
+          <div class="thumb" style="background-image:url('CS 161/Data/ScreenShot.png');"></div>
+          <div class="container">
+            <h4><b>Explorer of the Lost Tomb</b></h4>
+            <p>A game built in JavaFX for an honors project. Try to survive the longest in this rogue-like adventure!</p>
+          </div> 
+        </a>
+      </div>
+      <div class="card" tags="School,C#" style="background-color:#F3DF6C;">
+        <a href="CS 360/survivor.html">
+          <div class="thumb" style="background-image:url('CS 360/Data/TotalDramaIsland1.png');"></div>
+          <div class="container">
+            <h4><b>Keep Body and Soul Together-er</b></h4>
+            <p>A game built in Unity using C# for a school project. The game is designed to teach players about various data structures through minigames.</p>
+          </div> 
+        </a>
+      </div>
+      <div class="card" tags="Personal,C#" style="background-color:#F3DF6C;">
+        <a href="Personal/playermaker/playermaker.html">
+          <div class="thumb" style="background-image:url('Personal/playermaker/Data/Screenshot.png');"></div>
+          <div class="container">
+            <h4><b>D&D Player Formatter</b></h4>
+            <p>A simple GUI interface written in C# to auto format characters for the popular Table Top Role Playing Game, Dungeons and Dragons.</p>
+          </div> 
+        </a>
+      </div>
+      <div class="card" tags="Personal,C#" style="background-color:#F3DF6C;">
+        <a href="Personal/pokemon/pokemon.html">
+          <div class="thumb" style="background:url('Personal/pokemon/Data/logo.png') no-repeat;background-size:90%;background-position: 60% 50%;"></div>
+          <div class="container">
+            <h4><b>Project Pokémon</b></h4>
+            <p>A custom game made in Unity using C# based on the popular video game franchise, Pokémon.</p>
+          </div> 
+        </a>
+      </div>
+      <div class="NAN" id="NAN"><b>No Results Found</b></div>
+    </div>
+    </div>
+    <footer>
+        <div class="Footer" style="top:400px;">&#169; 2022 The-Architect01</div>
+    </footer> 
+  </body>
+</html>
