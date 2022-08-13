@@ -15,9 +15,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>My Portfolio</title>
     <link rel="icon" type="image/x-icon" href="../../../Assets/favicon.ico">
-    <link rel="stylesheet" href="../../../Assets/Unity WebGL/style.css">
+    <!--Imports-->
     <link rel="stylesheet" href="../../../Assets/style.css">
     <script src="../../../Assets/methods.js"></script>  
+    <link rel="stylesheet" href="../../project.css">
+    <script src="../../project.js"></script>
   </head>
   <body style="background:url('Data/Teselecta2.png') center fixed no-repeat;background-size:175%;width:100%">
   <!-- Side navigation -->
@@ -29,11 +31,55 @@
     <a href="../../../about.html#Contact Me">Contact</a>
   </div>
   <a class="openbtn" onclick="OpenNav()"><div id="MenuOpen" style="display:inline">Menu</div> &#9776;</a>
-
+<!--                     <img style="padding-top:100px;width:35%;margin:auto;display:block;" src="Data/Screenshot.png">
+   -->
   <div>
       <!--Preview-->
-      <div>
-        <img style="padding-top:100px;width:35%;margin:auto;display:block;" src="Data/Screenshot.png">
+      <div class="slideshow-container">
+        <div class="Slide" style="display:block">
+          <img src="../playermaker/Data/Race_Snap.png" style="width:100%;">
+          <div class="description">Select your race!</div>
+          <div class="footer">1/5</div>
+        </div>
+        
+        <div class="Slide">
+          <img src="../playermaker/Data/Class_Snap.png" style="width:100%">
+          <div class="description">Select your class!</div>
+          <div class="footer">2/5</div>
+        </div>
+        
+        <div class="Slide">
+          <img src="../playermaker/Data/Back_Snap.png" style="width:100%">
+          <div class="description">Select your background!</div>
+          <div class="footer">3/5</div>
+        </div>
+        
+        <div class="Slide">
+          <img src="../playermaker/Data/Custom_Snap.png" style="width: 100%;">
+          <div class="description">Customize your character!</div>
+          <div class="footer">4/5</div>
+        </div>
+
+        <div class="Slide">
+          <img src="../playermaker/Data/Out_Snap.png" style="width: 100%;">
+          <div class="description">Show off your character!</div>
+          <div class="footer">5/5</div>
+        </div>
+
+        <a class="prev" onclick="Move(-1)">❮</a>
+        <a class="next" onclick="Move(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center;padding-top:65px;">
+          <span class="dot" onclick="JumpTo(1)"></span> 
+          <span class="dot" onclick="JumpTo(2)"></span> 
+          <span class="dot" onclick="JumpTo(3)"></span> 
+          <span class="dot" onclick="JumpTo(4)"></span> 
+          <span class="dot" onclick="JumpTo(5)"></span> 
+        </div>
+        <script>document.getElementsByClassName("dot")[0].className += " active";</script>
         <p style="float:right;padding-top:50px;padding-right:75px;"><b>Art by: </b>Wizards of the Coast</p>
       </div>
       <!--Content-->
@@ -50,10 +96,10 @@
               <tr><div class="TableHeader"><b>Language: </b>C#</div></tr>
               <div style="padding:5px"></div>
                 <a href="https://github.com/The-Architect01/Dungeons-and-Dragons-Player-Maker/releases" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
-                  <img src="../../../Assets/Download.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px">Download</a>
+                  <img src="../../../Assets/Download.png" style="width:30px;height:30px;vertical-align:middle;">  Download</a>
                 <div style="padding:5px"></div>
                 <a href="https://github.com/The-Architect01/Dungeons-and-Dragons-Player-Maker" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
-                  <img src="../../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px;">GitHub</a>
+                  <img src="../../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;">  GitHub</a>
                 <div style="padding:5px"></div>
             </table>
           </div>
