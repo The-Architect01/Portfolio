@@ -17,6 +17,8 @@
     <link rel="icon" type="image/x-icon" href="../../Assets/favicon.ico">
     <link rel="stylesheet" href="../../Assets/style.css">
     <script src="../../Assets/methods.js"></script>  
+    <link rel="stylesheet" href="../project.css">
+    <script src="../project.js"></script>
   </head>
   <body style="background:url('Data/TileMap.png') center fixed no-repeat;background-size:100%;width:100%">
   <!-- Side navigation -->
@@ -31,9 +33,56 @@
 
   <div>
       <!--Preview-->
-      <div>
-        <img style="padding-top:100px;width: 40%; margin: auto;display: block;" src="Data/Screenshot.png">
+      <div class="slideshow-container">
+        <div class="Slide" style="display:block">
+          <img src="../CS 161/Data/Char_Snap.png" style="width:100%;">
+          <div class="description">Customize your characters!</div>
+          <div class="footer">1/5</div>
+        </div>
+              
+      <div class="Slide">
+        <img src="../CS 161/Data/High_Snap.png" style="width:100%">
+        <div class="description">Compare your scores!</div>
+        <div class="footer">2/5</div>
       </div>
+      
+      <div class="Slide">
+        <img src="../CS 161/Data/Room_Snap.png" style="width:100%">
+        <div class="description">Explore randomly generated dungeons!</div>
+        <div class="footer">3/5</div>
+      </div>
+      
+      <div class="Slide">
+        <img src="../CS 161/Data/Combat_Snap.png" style="width: 100%;">
+        <div class="description">Fight different enemies!</div>
+        <div class="footer">4/5</div>
+      </div>
+
+      <div class="Slide">
+        <img src="../CS 161/Data/Boss_Snap.png" style="width: 100%;">
+        <div class="description">Fight bosses!</div>
+        <div class="footer">5/5</div>
+      </div>
+
+      <a class="prev" onclick="Move(-1)">❮</a>
+      <a class="next" onclick="Move(1)">❯</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center;padding-top:65px;">
+        <span class="dot" onclick="JumpTo(1)"></span> 
+        <span class="dot" onclick="JumpTo(2)"></span> 
+        <span class="dot" onclick="JumpTo(3)"></span> 
+        <span class="dot" onclick="JumpTo(4)"></span> 
+        <span class="dot" onclick="JumpTo(5)"></span> 
+        <div style="right:50px;top:10px;position:block;">
+          <p>Art by: Forgotten Adventures</p>
+          <p>Music by: The The-Architect01</p>
+        </div>
+      </div>
+      <script>document.getElementsByClassName("dot")[0].className += " active";</script>
+      
       <!--Content-->
       <div class="Content" style="margin-top: 125px;">
         <div id="ContentBody">
@@ -48,10 +97,10 @@
               <tr><div class="TableHeader"><b>Language: </b>Java</div></tr>
               <div style="padding:5px"></div>
                 <a href="https://github.com/The-Architect01/Explorer-of-the-Lost-Tomb/releases" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
-                  <img src="../../Assets/Download.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px">Download</a>
+                  <img src="../../Assets/Download.png" style="width:30px;height:30px;vertical-align:middle;">  Download</a>
                 <div style="padding:5px"></div>
                 <a href="https://github.com/The-Architect01/Explorer-of-the-Lost-Tomb" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
-                  <img src="../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px;">GitHub</a>
+                  <img src="../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;">  GitHub</a>
                 <div style="padding:5px"></div>
             </table>
           </div>
@@ -61,7 +110,7 @@
         </div>
       </div>   
   </div>
-  <footer>
+  <footer style="bottom:-5px;">
     <div class="Footer">&#169; 2022 The-Architect01</div>
   </footer>
   </body>
