@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="../../../Assets/Unity WebGL/style.css">
     <link rel="stylesheet" href="../../../Assets/style.css">
     <script src="../../../Assets/methods.js"></script>  
+    <link rel="stylesheet" href="../../project.css">
+    <script src="../../project.js"></script>
   </head>
   <body style="background:url('Data/BackgroundUI.png') center fixed no-repeat;width:100%">
   <!-- Side navigation -->
@@ -31,28 +33,47 @@
   <a class="openbtn" onclick="OpenNav()"><div id="MenuOpen" style="display:inline">Menu</div> &#9776;</a>
 
   <div>
-    <!--Game Preview-->
     <div>
-      <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas" width=768 height=576></canvas>
-        <div id="unity-loading-bar">
-          <div id="unity-logo" style="width: 282px; height: 150px; background: url('Data/logo.png') no-repeat center; background-size: contain"></div>
-          <div id="unity-progress-bar-empty">
-            <div id="unity-progress-bar-full"></div>
-          </div>
+      <!--Preview-->
+      <div class="slideshow-container" style="max-width:50%">
+        <div class="Slide" style="display:block">
+          <img src="../pokemon/Data/Fight_Snap.png" style="width:100%;border-radius:6px;">
+          <div class="description">Fight Pokémon!</div>
+          <div class="footer">1/3</div>
         </div>
-        <div id="unity-warning"> </div>
-        <div id="unity-footer">
-          <div id="unity-webgl-logo"></div>
-          <!--<div id="unity-fullscreen-button"></div>-->
-          <div id="unity-build-title">Pokémon Renegade</div>
+              
+        <div class="Slide">
+          <img src="../pokemon/Data/Search_Snap.png" style="width:100%;border-radius:6px;">
+          <div class="description">Search the Pokédex!</div>
+          <div class="footer">2/3</div>
         </div>
+      
+        <div class="Slide">
+          <img src="../pokemon/Data/Data_Snap.png" style="width:100%;border-radius:6px;">
+          <div class="description">Explore the region's Pokémon in the Pokédex!</div>
+          <div class="footer">3/3</div>
         </div>
-        <p style="float:right;padding-top:50px"><b>Art By: </b>The Pokemon Company</p>
-        <p style="float:right;padding-top:50px"><b>Music By: </b>No Music</p>
+
+      <a class="prev" style="color:white" onclick="Move(-1)">❮</a>
+      <a class="next" style="color:white" onclick="Move(1)">❯</a>
+      
       </div>
+      <br>
+      
+      <div style="text-align:center;padding-top:65px;">
+        <span class="dot" onclick="JumpTo(1)"></span> 
+        <span class="dot" onclick="JumpTo(2)"></span> 
+        <span class="dot" onclick="JumpTo(3)"></span> 
+      </div>
+      <script>document.getElementsByClassName("dot")[0].className += " active";</script>
+      <div class="Citation">
+          <p><b>Art by: </b>The-Architect01 & <a href="https://github.com/DelagrangeTyler">DelegrangeTyler</a></p>
+          <p><b>Music by: </b>Nikolai Rimsky-Korsakov & Benjamin Tissot</p>
+        </table>
+      </div>
+    </div>
       <!--Content-->
-      <div class="Content" style="margin-top: 1000px;" >
+      <div class="Content" style="margin-top: 200px;" >
         <div id="ContentBody">
           <h1 class="header" id="ContentHeader" sticky="True">Project Pokémon</h1>
           <div id="ContentFF" class="ff" sticky="True">
@@ -65,10 +86,10 @@
               <tr><div class="TableHeader"><b>Language: </b>C#</div></tr>
               <div style="padding:5px"></div>
                 <a href="https://github.com/The-Architect01/Project-Pokemon/releases" target="_blank" style="padding-left:15px;font-size:22px;">
-                  <img src="../../../Assets/Download.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px">Download</a>
+                  <img src="../../../Assets/Download.png" style="width:30px;height:30px;vertical-align:middle;">  Download</a>
                 <div style="padding:5px"></div>
                 <a href="https://github.com/The-Architect01/Project-Pokemon" target="_blank" style="padding-left:15px;font-size:22px;">
-                  <img src="../../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px;">GitHub</a>
+                  <img src="../../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;">  GitHub</a>
                 <div style="padding:5px"></div>
             </table>
           </div>
