@@ -114,6 +114,13 @@
     text-align: center;
 }
 
+.Citation {
+    float:right;
+    right:150px;
+    margin-top:50px;
+    background-color: rgba(250,250,250,.25);
+}
+
 /*Header Formatting*/
 h1{
     position:sticky;
