@@ -15,9 +15,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>My Portfolio</title>
     <link rel="icon" type="image/x-icon" href="../../Assets/favicon.ico">
-    <link rel="stylesheet" href="../../Assets/Unity WebGL/style.css">
     <link rel="stylesheet" href="../../Assets/style.css">
     <script src="../../Assets/methods.js"></script>  
+    <link rel="stylesheet" href="../project.css">
+    <script src="../project.js"></script>
   </head>
   <body style="background:url('Data/TotalDramaIsland.png') center fixed no-repeat;background-size:140%;width:100%">
   <!-- Side navigation -->
@@ -31,26 +32,54 @@
   <a class="openbtn" onclick="OpenNav()"><div id="MenuOpen" style="display:inline">Menu</div> &#9776;</a>
 
   <div>
-    <!--Game Preview-->  
-    <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas" width=960 height=540></canvas>
-          <div id="unity-loading-bar">
-            <div id="unity-logo" style="width: 282px; height: 150px; background: url('Data/logo.png') no-repeat center; background-size: contain"></div>
-            <div id="unity-progress-bar-empty">
-              <div id="unity-progress-bar-full"></div>
-            </div>
-          </div>
-          
-          <div id="unity-warning"> </div>
-            <div id="unity-footer">
-              <div id="unity-webgl-logo"></div>
-              <div id="unity-fullscreen-button"></div>
-              <div id="unity-build-title">CS 360 Group Project</div>
-          </div>
-      </section>
-      </div> 
+    <div>
+      <!--Preview-->
+      <div class="slideshow-container" style="max-width:50%">
+        <div class="Slide" style="display:block">
+          <img src="../CS 360/Data/Load_Snap.png" style="width:100%;border-radius:6px;">
+          <div class="description">Learn about data structures!</div>
+          <div class="footer">1/4</div>
+        </div>
+              
+        <div class="Slide">
+          <img src="../CS 360/Data/Minigames_Snap.png" style="width:100%;border-radius:6px;">
+          <div class="description">Play mini-games!</div>
+          <div class="footer">2/4</div>
+        </div>
+      
+        <div class="Slide">
+          <img src="../CS 360/Data/Game_Snap.png" style="width:100%;border-radius:6px;">
+          <div class="description">Play games based on data structures!</div>
+          <div class="footer">3/4</div>
+        </div>
+      
+        <div class="Slide">
+          <img src="../CS 360/Data/Stats_Snap.png" style="width:100%;border-radius:6px;">
+          <div class="description">Compare your previous scores!</div>
+          <div class="footer">4/4</div>
+        </div>
+
+      <a class="prev" onclick="Move(-1)">❮</a>
+      <a class="next" onclick="Move(1)">❯</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center;padding-top:65px;">
+        <span class="dot" onclick="JumpTo(1)"></span> 
+        <span class="dot" onclick="JumpTo(2)"></span> 
+        <span class="dot" onclick="JumpTo(3)"></span> 
+        <span class="dot" onclick="JumpTo(4)"></span> 
+      </div>
+      <script>document.getElementsByClassName("dot")[0].className += " active";</script>
+      <div class="Citation">
+          <p><b>Art by: </b>The-Architect01 & <a href="https://github.com/DelagrangeTyler">DelegrangeTyler</a></p>
+          <p><b>Music by: </b>Nikolai Rimsky-Korsakov & Benjamin Tissot</p>
+        </table>
+      </div>
+    </div>
       <!--Content-->
-      <div class="Content">
+      <div class="Content" style="margin-top: 200px;">
         <div id="ContentBody">
           <h1 class="header" id="ContentHeader" sticky="True">CS 360 Project - Keep Body and Soul Together-er</h1>
           <div id="ContentFF" class="ff" sticky="True">
@@ -63,13 +92,13 @@
               <tr><div class="TableHeader"><b>Language: </b>C#</div></tr>
               <div style="padding:5px"></div>
               <a href="https://github.com/SuddenDeath42/CS-360-Project/releases/" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
-                <img src="../../Assets/Download.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px">Download</a>
+                <img src="../../Assets/Download.png" style="width:30px;height:30px;vertical-align:middle;">  Download</a>
               <div style="padding:5px"></div>
               <a href="https://github.com/SuddenDeath42/CS-360-Project" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
-                <img src="../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px;">GitHub</a>
+                <img src="../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;">  GitHub</a>
               <div style="padding:5px"></div>
               <a href="../projects.html" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
-                <img src="../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px;">GitHub</a>
+                <img src="../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;">  GitHub</a>
               <div style="padding:5px"></div>
             </table>
           </div>
