@@ -1,5 +1,4 @@
 let slideIndex = 1;
-ShowSlides(slideIndex);
 
 function Move(n) {
   ShowSlides(slideIndex += n);
