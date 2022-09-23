@@ -2,11 +2,6 @@
 <!-- Google recaptcha API library -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-<!-- Status message -->
-<?php if(!empty($statusMsg)){ ?>
-    <div class="status-msg <?php echo $status; ?>"><?php echo $statusMsg; ?></div>
-<?php } ?>
-
 <html lang="en-us">
   <head>
     <!--Font Imports-->
@@ -35,18 +30,17 @@
     </div>
     <a class="openbtn" onclick="OpenNav()"><div id="MenuOpen" style="display:inline">Menu</div> &#9776;</a>
 
-    <div>
+    <div style="background-color:#90D4CC" class="Body">
       <!--Content-->
         <div style="width: 100%;">
             <img src="Assets/Icon_Draft.png" style="width:128px;height:128px;">
         </div>
         <div class="form-input">
-          <!-- Google reCAPTCHA box -->
-          <div class="g-recaptcha" data-sitekey="6LcbgB4iAAAAAGjPfveklBJKcq-pdrD6wets3PhQ"></div>
+          
       </div>
     </div>
     <footer>
-        <div class="Footer">&#169; 2022 The-Architect01</div>
+        <div class="Footer" style="top:100%">&#169; 2022 The-Architect01</div>
     </footer> 
   </body>
 </html>

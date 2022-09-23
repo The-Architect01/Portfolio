@@ -74,6 +74,10 @@
     border-top: 5px solid black;
     bottom:0;
 }
+.Body{
+    position: relative;
+    min-height: 100vh;
+}
 /*Content Formatting*/
 .Content {
     background:white;
@@ -81,7 +85,7 @@
     width:80%;
     min-width: 100%;
     height:100%;
-    padding-bottom:20px;
+    padding-bottom:55px;
     left:25px;
     min-height:500px;
 }
@@ -151,6 +155,7 @@ p {
     padding-right: 25px;
     font-size: 18px;
 }
+
 /*Inputs*/
 /*Input*/
 input[type=text] {
