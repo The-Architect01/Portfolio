@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php include_once "Assets/form.php";?>
 <html lang="en-us">
   <head>
     <!--Font Imports-->
@@ -15,20 +14,21 @@
     <title>My Portfolio</title>
     <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
     <link rel="stylesheet" href="Assets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="Assets/methods.js"></script>  
   </head>
   <body style="overflow-x:hidden">
     <!-- Side navigation -->
     <div id = "CustomSideNav" class="Sidenav">
-        <a class="closebtn" onclick="CloseNav()">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a><!--You're already here! I'll reload for you though.-->
-        <a href="Projects/projects.html">Projects</a>
-        <a href="#Contact Me">Contact</a>
-    </div>
-    <a class="openbtn" onclick="OpenNav()"><div id="MenuOpen" style="display:inline">Menu</div> &#9776;</a>
-
-    <div class="Body">
+      <a class="closebtn" onclick="CloseNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a><!--You're already here! I'll reload for you though.-->
+      <a href="Projects/projects.html">Projects</a>
+      <a href="#Contact Me">Contact</a>
+  </div>
+  <a class="openbtn" onclick="OpenNav()"><div id="MenuOpen" style="display:inline">Menu</div> &#9776;</a>
+    
+  <div class="Body">
       <!--Content-->
       <h1 style="font-size:50px;padding-left:50px;"><a href="#top">About Me</a></h1>
       <div class="Content" style="margin-top:25px;padding-left:25px;min-height: 100%;">
@@ -44,6 +44,7 @@
         </div>
       </div>
       <div>
+        <div style="min-height: 450px;">
         <img src="Assets/Icon_Draft.png" 
         style="float:left;width:25%;padding-left:50px;padding-right:25px;padding-bottom:25px;">
         <p>Hi! I'm The-Architect01!</p>
@@ -55,13 +56,30 @@
         </p>
         <p>So far I have specialized in game development primarily in Visual Basic and in C#, though I am eager to learn new languages and find new avenues.</p>
       </div>
-      
+    </div>
+    <div  style="padding-top: 25px;">
       <section id="Contact Me">
         <h2 style="padding-left:40px">Contact Me</h2>
+        <div style="float:left;position:relative; padding-right:10px">
         <a href="https://github.com/The-Architect01" target="_blank" style="padding-left:50px;text-decoration:none;font-size:22px;">
-        <img src="Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px;">GitHub</a> 
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRcBh7dSpFbf0IG2Ml3k_f3-PPIu3dmNGZVhXKTCrcp2Ysiw/viewform?usp=pp_url&entry.1994019312=They/Them" width="100%" height="947" frameborder="10px" margin="auto">Loading…</iframe>
+        <img src="Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px;">GitHub</a></div>
+        <section id="UserForm">
+        <form name="inputForm" id="inputForm" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdRcBh7dSpFbf0IG2Ml3k_f3-PPIu3dmNGZVhXKTCrcp2Ysiw/formResponse?" target="hiddeniframe" onsubmit="submitted=true;">
+          Name:<br>
+          <input type="text" name="entry.2005620554" id="entry.2005620554" class="form.input"><br>
+          Email:<br>
+          <input type="text" name="entry.1092508711" id="entry.1092508711" class="form.input"><br>
+          Preferred Pronouns: (NOTE: if not filled, I will default to "They/Them")<br>
+          <input type="text" name="entry.1994019312" id="entry.1994019312" value="They/Them" class="form.input"><br>
+          Message:<br>
+          <input type="text" name="entry.839337160" id="entry.839337160" class="form.input"><br>
+          <input type="submit" value="Submit" onclick="Submit()">
+          <div id="ErrorText" class="Error">You didn't enter a valid email!</div>
+        </form>
+        <iframe name="hiddeniframe" id="hiddeniframe" style="display:none" onload="if(submitted){}"></iframe>
+        </section> 
       </section>
+    </div>
     </div>
     <footer>
         <div class="Footer" style="top:100%">&#169; 2022 The-Architect01</div>
