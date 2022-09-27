@@ -26,21 +26,31 @@
         <a href="index.html">Home</a><!--You're already here! I'll reload for you though.-->
         <a href="about.html">About</a>
         <a href="Projects/projects.html">Projects</a>
+        <a href="blog.html">Blog</a>
         <a href="about.html#Contact Me">Contact</a>
     </div>
     <a class="openbtn" onclick="OpenNav()"><div id="MenuOpen" style="display:inline">Menu</div> &#9776;</a>
 
-    <div style="background-color:#90D4CC" class="Body">
+    <div style="background-color:#899DA4; min-height: 93.3vh;" class="Body">
       <!--Content-->
-        <div style="width: 100%;">
-            <img src="Assets/Icon_Draft.png" style="width:128px;height:128px;">
+        <div style="bottom: 25px; right: 75px; position: absolute;" id="ContentFF">
+          <img src="Assets/Icon_Draft.png" style="width:600px;height:600px;">
         </div>
-        <div class="form-input">
-          
-      </div>
+        <div style="position:absolute; bottom:10px; left:20px">
+          <p id='time' style="font-style:italic;font-weight: 600; font-size: 160px; color:white;padding-bottom: -25px;"></p>
+          <p style="font-size: 64px;padding-top:-25px">I'm The Architect.</p>
+          <p style="font-size: 36px;">Programmer | Designer</p>
+        </div> 
     </div>
     <footer>
         <div class="Footer" style="top:100%">&#169; 2022 The-Architect01</div>
     </footer> 
   </body>
 </html>
+<script>
+  var now = new Date();
+  var hours = now.getHours();
+  if (5 <= hours && hours < 17) { var type = "Bonjour."; }
+  else if (17 <= hours || hours < 5) { var type = "Bonsoir."; }
+  document.getElementById("time").innerHTML = `${type}`;
+</script>

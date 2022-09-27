@@ -16,7 +16,7 @@
     z-index: 2;
     top: 0;
     right: 0;
-    background-color: #90D4CC; 
+    background-color: #78B7C5; 
     overflow-x: hidden;
     padding-top: 60px; 
     transition: 0.5s;
@@ -76,7 +76,7 @@
 }
 .Body{
     position: relative;
-    min-height: 100vh;
+    min-height: 93.3vh;
 }
 /*Content Formatting*/
 .Content {
