@@ -17,9 +17,9 @@
     <link rel="icon" type="image/x-icon" href="../../../Assets/favicon.ico">
     <!--Imports-->
     <link rel="stylesheet" href="../../../Assets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="../../../Assets/methods.js"></script>  
     <link rel="stylesheet" href="../../project.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="../../project.js"></script>
   </head>
   <body style="background:url('Data/Teselecta2.png') center fixed no-repeat;background-size:175%;width:100%">
@@ -104,35 +104,37 @@
                 <div style="padding:5px"></div>
             </table>
           </div>
-          <h2>Project Summary</h2>
-            <p>This project originally started as an Excel spreadsheet developed to make formatting D&D player characters.
-               Unfortunately, this spreadsheet quickly got extremely large (>13 mb) and hard to manage. Luckly I was learning how to develop forms using C#.net WinForms in Visual Studio 2019.
-            </p>
-            <p>Once I developed the framework to build the app (mainly print, auto-updating, and saveing/loading features), I was able to quickly 
-              add the races, classes, and backgrounds found in the player's handbook. I am currently planning on adding more sourcebooks and features in the future.</p>      
-            <style>
-              h3 {
-                padding-left: 35px;
-              }
-              h4 {
-                padding-left: 35px;
-              }
-            </style>
-            <h3>Features</h3>
-            <h4>Auto Updating</h4>
-            <p>This feature was the hardest to implement in the way that was originally envisioned. Originally, the plan was to just update
-              the required .resx files which were used to store the data for each of the player options. This was going to be accomplished by
-              using the built in 'Check For Updates' Feature of ClickOnce, the build format that would prepare a .exe for distribution. However,
-              ClickOnce has very precise security standards that were difficult to fullfil on a small scale level. The Solution: make my own auto updating system.
-            </p>
-            <p>So to make my own custom auto update system, I used the GitHub API and the built in librarys of C#.net.
-            <p>First, the program checks if a new release has been published on GitHub using the API. If so, download the .zip containing the updated .exe.</p>
-            <p>Next, check for the zip-slip vulernablility. If the zip file is clean, extract the contents and overwrite the old version.</p>
-            </p>
-            <p></p>
-            <p><b>NOTE: </b>This feature is being reviewed to see how to simplify the process and make it more secure.</p>
-            <h4>Printing</h4>
-            </div>
+          <div id="ContentFF">
+              <h2>Project Summary</h2>
+                <p>This project originally started as an Excel spreadsheet developed to make formatting D&D player characters.
+                Unfortunately, this spreadsheet quickly got extremely large (>13 mb) and hard to manage. Luckly I was learning how to develop forms using C#.net WinForms in Visual Studio 2019.
+                </p>
+                <p>Once I developed the framework to build the app (mainly print, auto-updating, and saveing/loading features), I was able to quickly 
+                add the races, classes, and backgrounds found in the player's handbook. I am currently planning on adding more sourcebooks and features in the future.</p>      
+                <style>
+                  h3 {
+                    padding-left: 35px;
+                  }
+                  h4 {
+                    padding-left: 35px;
+                  }
+                </style>
+                <h3>Features</h3>
+                <h4>Auto Updating</h4>
+                <p>This feature was the hardest to implement in the way that was originally envisioned. Originally, the plan was to just update
+                  the required .resx files which were used to store the data for each of the player options. This was going to be accomplished by
+                  using the built in 'Check For Updates' Feature of ClickOnce, the build format that would prepare a .exe for distribution. However,
+                  ClickOnce has very precise security standards that were difficult to fullfil on a small scale level. The Solution: make my own auto updating system.
+                </p>
+                <p>So to make my own custom auto update system, I used the GitHub API and the built in librarys of C#.net.
+                <p>First, the program checks if a new release has been published on GitHub using the API. If so, download the .zip containing the updated .exe.</p>
+                <p>Next, check for the zip-slip vulernablility. If the zip file is clean, extract the contents and overwrite the old version.</p>
+                </p>
+                <br>
+                <p><b>NOTE: </b>This feature is being reviewed to see how to simplify the process and make it more secure.</p>
+                <h4>Printing</h4>
+          </div>
+      </div>
   </div>
   <footer>
     <div class="Footer" style="top:100%">&#169; 2022 The-Architect01</div>

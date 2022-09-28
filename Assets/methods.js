@@ -7,17 +7,24 @@ function OpenNav(){
 }
 function CloseNav(){
     document.getElementById("CustomSideNav").style.width="0px";
-    try{document.getElementById("ContentFF").style.marginRight="75px";}catch{}
+    try{document.getElementById("ContentFF").style.marginRight="90px";}catch{}
 }
 function Submit(){
     document.getElementById("ErrorText").style.display = "none";
     if(Valid()){
         document.getElementById("inputForm").style.display = "none";
-        document.getElementById("UserForm").append("Thanks for reaching out to me! I'll try to respond soon!");
+        document.getElementById("Thanks").style.display = "block";
     }else{
         document.getElementById("ErrorText").style.display = "block";
     }
 };
+function AnimateHover(sender, v){
+    if(v){
+        sender.style.background = "#5BBCD6";
+    }else{
+        sender.style.background = "#ABDDDE";
+    }
+}
 function Valid(){
     if(!document.getElementById("entry.2005620554").value.match(/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/) ||
         document.getElementById("entry.2005620554").value == "") { document.getElementById("ErrorText").innerHTML = "You didn't enter a valid name!"; return false; }
