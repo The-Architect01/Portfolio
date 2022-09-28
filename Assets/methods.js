@@ -26,7 +26,7 @@ function AnimateHover(sender, v){
     }
 }
 function Valid(){
-    if(!document.getElementById("entry.2005620554").value.match(/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/) ||
+    if(!document.getElementById("entry.2005620554").value.match(/^[A-Za-zÀ-ÖØ-öø-ÿ ]+$/) ||
         document.getElementById("entry.2005620554").value == "") { document.getElementById("ErrorText").innerHTML = "You didn't enter a valid name!"; return false; }
     if(!document.getElementById("entry.1092508711").value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) ||
         document.getElementById("entry.1092508711").value == "") { document.getElementById("ErrorText").innerHTML = "You didn't enter a valid email!"; return false; }
