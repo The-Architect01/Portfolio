@@ -38,9 +38,11 @@
             <tr><div class="TableHeader"><b>College Year: </b>Junior</div></tr>
             <tr><div class="TableHeader"><b>Degree Program: </b>CS/DSAS</div></tr>
             <tr><div class="TableHeader"><b>Coding Experience: </b>5 yr</div></tr>
-            <tr><div class="TableHeader" style="border-bottom:none">
-              <b>Skills: </b>C#, Java, Excel, MS Office</div></tr>
-          </table>
+            <tr><div class="TableHeader"><b>Skills: </b>C#, Java, Excel, MS Office</div></tr>
+            <tr><div class="TableHeader" style="border-bottom:none"><b>Social: </b>
+            <tr><a href="https://github.com/The-Architect01" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
+                <img src="Assets/GitHub-Mark-120px-plus.png" style="width:30px;height:30px;vertical-align:middle;padding-bottom:10px;">  GitHub</a></tr>        
+            </table>
         </div>
       </div>
       <div>
@@ -57,25 +59,23 @@
         <p>So far I have specialized in game development primarily in Visual Basic and in C#, though I am eager to learn new languages and find new avenues.</p>
       </div>
     </div>
-    <div  style="padding-top: 25px;">
+    <div style="padding-top: 25px;">
       <section id="Contact Me">
         <h2 style="padding-left:40px">Contact Me</h2>
-        <div style="float:left;position:relative; padding-right:10px">
-        <a href="https://github.com/The-Architect01" target="_blank" style="padding-left:50px;text-decoration:none;font-size:22px;">
-        <img src="Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;padding-right:5px;">GitHub</a></div>
-        <section id="UserForm">
-        <form class="Form" name="inputForm" id="inputForm" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdRcBh7dSpFbf0IG2Ml3k_f3-PPIu3dmNGZVhXKTCrcp2Ysiw/formResponse?" target="hiddeniframe" onsubmit="submitted=true;">
-          Name:<br>
-          <input type="text" name="entry.2005620554" id="entry.2005620554" class="form.input"><br>
-          Email:<br>
-          <input type="text" name="entry.1092508711" id="entry.1092508711" class="form.input"><br>
-          Preferred Pronouns: (NOTE: if not filled, I will default to "They/Them")<br>
-          <input type="text" name="entry.1994019312" id="entry.1994019312" value="They/Them" class="form.input"><br>
-          Message:<br>
-          <input type="text" name="entry.839337160" id="entry.839337160" class="form.input"><br>
-          <input type="submit" value="Submit" onclick="Submit()">
-          <div id="ErrorText" class="Error">You didn't enter a valid email!</div>
+        <section id="UserForm" class="UserForm">
+        <form class="InputForm" name="inputForm" id="inputForm" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdRcBh7dSpFbf0IG2Ml3k_f3-PPIu3dmNGZVhXKTCrcp2Ysiw/formResponse?" target="hiddeniframe" onsubmit="submitted=true;">
+          <div class="inputs">
+            <input type="text" placeholder="Name" name="entry.2005620554" id="entry.2005620554" class="Input">
+            <input type="text" placeholder="Email" name="entry.1092508711" id="entry.1092508711" class="Input">
+            <input type="text" placeholder="Preferred Pronouns" name="entry.1994019312" id="entry.1994019312" class="Input">
+            <div id="ErrorText" class="Error">You didn't enter a valid email!</div>  
+          </div>  
+          <div class="msg">
+            <textarea placeholder="Message" name="entry.839337160" id="entry.839337160" class="Input"></textarea>
+            <input type="submit" class="Buttons" value="Submit" class="Button" onpointerenter="AnimateHover(this,1)" onpointerleave="AnimateHover(this,0)" onclick="Submit()">
+          </div>
         </form>
+        <div id="Thanks" style="display: none; padding-left:50px; font-size:18px;">Thanks for reaching out to me! I'll try to respond soon!</div>
         <iframe name="hiddeniframe" id="hiddeniframe" style="display:none" onload="if(submitted){}"></iframe>
         </section> 
       </section>
