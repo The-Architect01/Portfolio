@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <!--Font Imports-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Header-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <!--Body-->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <!--Data Stuff-->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
+    <link rel="stylesheet" href="../Assets/style.css">
+    <link rel="stylesheet" href="blog.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../Assets/methods.js"></script>  
+    <script src="search.js"></script>
+  </head>
+  <body >
+    <!-- Side navigation -->
+    <div id = "CustomSideNav" class="Sidenav">
+        <a class="closebtn" onclick="CloseNav()">&times;</a>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../Projects/projects.html">Projects</a>
+        <a href="blog.html">Blog</a><!--You're already here! I'll reload for you though.-->
+        <a href="../about.html#Contact Me">Contact</a>
+    </div>
+    <a class="openbtn" onclick="OpenNav()"><div id="MenuOpen" style="display:inline">Menu</div> &#9776;</a>
+    <div class="Body">
+    <!--Content-->
+    <h1 style="background-color:transparent;font-size:50px"><a href="#top">Blog</a></h1>
+    <div class="InputWrapper">
+        <b style="font-size:28px">Filters</b>
+        <input style="display:none;" type=text spellcheck="true" id="Test">
+        <div value="False" onclick="Toggle_Personal(this)" class="CheckBox">
+          <img id="Personal_Check" src="../Assets/Check_Empty.png" style="width:20px;height:20px;vertical-align:middle;padding-right:5px;">
+          Personal
+        </div>
+        <!--<div value="False" onclick="Toggle_School(this)" class="CheckBox">
+          <img id="School_Check" src="../Assets/Check_Empty.png" style="width:20px;height:20px;vertical-align:middle;padding-right:5px;">
+          School
+        </div>
+        <div value="False" onclick="Toggle_C3(this)" class="CheckBox">
+          <img id="C#_Check" src="../Assets/Check_Empty.png" style="width:20px;height:20px;vertical-align:middle;padding-right:5px;">
+          C#
+        </div>
+        <div value="False" onclick="Toggle_Java(this)" class="CheckBox">
+          <img id="Java_Check" src="../Assets/Check_Empty.png" style="width:20px;height:20px;vertical-align:middle;padding-right:5px;">
+          Java
+        </div>
+    </div>
+    <div class="cardDisplay">
+      <a href="BlogPosts/sample.html"class="card" tags="School,Java" >
+        <div class="container">
+            <h4><b>Sample</b></h4>
+            <p>An example blog post</p>
+        </div>
+      </div>-->
+      <div class="NAN" id="NAN" style="display: block;"><b>No Results Found</b></div>
+    </div>
+    </div>
+    <footer>
+        <div class="Footer" style="top:400px;">&#169; 2022 The-Architect01</div>
+    </footer> 
+  </body>
+</html>
