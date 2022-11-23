@@ -1,13 +1,26 @@
-$(document).ready(function() {$('body').bind('cut copy paste', function(event) {event.preventDefault();});});
+$(document).ready(function() {$('body').bind('cut copy paste', function(event) {event.preventDefault();}); });
 $(document).bind("contextmenu",function(e){ return false; });
+
+function LoadTemplate(){
+    var request = new XMLHttpRequest();
+    request.open('GET', './template.html', false);
+    request.onreadystatechange= function() {
+      if (this.readyState !== 4 || this.status !== 200) return;
+      document.getElementById('TemplateHeader').innerHTML += this.responseText;
+    };
+    request.send();
+
+    document.getElementById("TemplateHeader").removeAttribute("id");
+}
+
 var submitted=false;
 function OpenNav(){
     document.getElementById("CustomSideNav").style.width="250px";
-    try{document.getElementById("ContentFF").style.marginRight = "300px";}catch{}
+    //try{document.getElementById("ContentFF").style.marginRight = "300px";}catch{}
 }
 function CloseNav(){
     document.getElementById("CustomSideNav").style.width="0px";
-    try{document.getElementById("ContentFF").style.marginRight="90px";}catch{}
+    //try{document.getElementById("ContentFF").style.marginRight="90px";}catch{}
 }
 function Submit(){
     document.getElementById("ErrorText").style.display = "none";
