@@ -3,7 +3,7 @@ $(document).bind("contextmenu",function(e){ return false; });
 
 function LoadTemplate(){
     var request = new XMLHttpRequest();
-    request.open('GET', '../../../Assets/template.html', false);
+    request.open('GET', "https://the-architect01.github.io/Portfolio/Assets/template.html", false);
     request.onreadystatechange= function() {
       if (this.readyState !== 4 || this.status !== 200) return;
       document.getElementById('TemplateHeader').innerHTML += this.responseText;
