@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="../../project.css">
     <script src="../../project.js"></script>
   </head>
-  <body style="background:url('Data/Teselecta2.png') center fixed no-repeat;background-size:175%;width:100%">
+  <body style="background:url('Data/Teselecta2.png') center fixed;background-size:175%;width:100%">
   <!-- Side navigation -->
   <div id = "CustomSideNav" class="Sidenav">
     <a class="closebtn" onclick="CloseNav()">&times;</a>
@@ -85,10 +85,10 @@
         </div>
       </div>
       <!--Content-->
-      <div class="Content" style="margin-top: 125px;">
+      <div class="Content" style="margin-top:175px;padding-bottom: 50px;">
         <div id="ContentBody">
           <h1 class="header" id="ContentHeader" sticky="True">D&D Player Formatter</h1>
-          <div id="ContentFF" class="ff" sticky="True" style="width:22%">
+          <div id="ContentFF" class="ff" sticky="True" style="margin-left: 10px;">
             <div class="Title">Fast Facts</div>
             <table>
               <tr><div class="TableHeader"><b>Project Type: </b>Personal</div></tr>
@@ -105,40 +105,125 @@
                 <div style="padding:5px"></div>
             </table>
           </div>
-          <div id="ContentFF">
-              <h2>Project Summary</h2>
-                <p>This project originally started as an Excel spreadsheet developed to make formatting D&D player characters.
-                Unfortunately, this spreadsheet quickly got extremely large (>13 mb) and hard to manage. Luckly I was learning how to develop forms using C#.net WinForms in Visual Studio 2019.
-                </p>
-                <p>Once I developed the framework to build the app (mainly print, auto-updating, and saveing/loading features), I was able to quickly 
-                add the races, classes, and backgrounds found in the player's handbook. I am currently planning on adding more sourcebooks and features in the future.</p>      
-                <style>
-                  h3 {
-                    padding-left: 35px;
-                  }
-                  h4 {
-                    padding-left: 35px;
-                  }
-                </style>
-                <h3>Features</h3>
-                <h4>Auto Updating</h4>
-                <p>This feature was the hardest to implement in the way that was originally envisioned. Originally, the plan was to just update
-                  the required .resx files which were used to store the data for each of the player options. This was going to be accomplished by
-                  using the built in 'Check For Updates' Feature of ClickOnce, the build format that would prepare a .exe for distribution. However,
-                  ClickOnce has very precise security standards that were difficult to fullfil on a small scale level. The Solution: make my own auto updating system.
-                </p>
-                <p>So to make my own custom auto update system, I used the GitHub API and the built in librarys of C#.net.
-                <p>First, the program checks if a new release has been published on GitHub using the API. If so, download the .zip containing the updated .exe.</p>
-                <p>Next, check for the zip-slip vulernablility. If the zip file is clean, extract the contents and overwrite the old version.</p>
-                </p>
-                <br>
-                <p><b>NOTE: </b>This feature is being reviewed to see how to simplify the process and make it more secure.</p>
-                <h4>Printing</h4>
+          <div id="ContentFF" style="height: min-content;">
+            <style>
+              h3 {
+                padding-left: 35px;
+                font-size: 24px;
+                font-style: normal;
+              }
+              h4 {
+                padding-left: 35px;
+                font-size: 20px;
+                font-style: italic;
+              }
+            </style>
+            <h2>Project Summary</h2>
+            <p>
+              I originally started this project as an Excel spreadsheet to help me create D&D characters. I added a lot of features to this original
+              draft of the project, but this quickly made the spreadsheet unmanageable and hard to use. Luckily, I was exploring C# in Visual Studio
+              and decided to update the project to be more usable and eventually sharable.
+            </p>
+            <p>
+              My first step was to decide on what features to implement in my 'dream' player creator. I decided on the following features:
+              <ul style="padding-left:75px;">
+                <li>Lots of character options</li>
+                <li>Auto-updating options</li>
+                <li>Save/Load the character</li>
+                <li>Allow for homebrew (where users modify options)</li>
+                <li>Print the character</li>
+                <li>Play the character</li>
+                <li>Share the character</li>
+              </ul>
+              </p>
+              <p>
+              From that list, I then narrowed down the features to decide what was 'core' to a player creator. My core features I decided to implement:
+              <ul style="padding-left:75px;">
+                <li>Many character options</li>
+                <li>Auto-updating abilities</li>
+                <li>Saving and Loading</li>
+                <li>Allow for homebrew</li>
+                <li>Printing/Sharing the character</li>
+              </ul>
+              </p>
+              <p>
+              To narrow down the scope, I decided to focus exclusively on the Player Handbook. This was mainly so that I wouldn't get distracted by
+              the many supplemental books and focus on getting a functional prototype out.<br>
+              To help me distribute the program I used Visual Studio's ClickOnce publishing option to create a distributable .exe.
+            </p>
+            <h3>Features</h3>
+
+            <h4>Character Options</h4>
+            <p>
+              As I was focusing on the Player Handbook, I started by creating a database of the character options described in the book.
+              This involved 30 race options, 40 class options, and 16 backgrounds. Each option category got its own database using the Visual Studio
+              resource file feature. This allowed me to load the data for any of the options whenever the user requested it.
+            </p>
+
+            <h4>Auto Updating</h4>
+            <p>
+              This feature was the hardest to implement with my knowledge of C# and the ClickOnce publishing option at the time.
+              Originally, I intended to use the built-in auto update feature of ClickOnce. However, as the project was to be hosted on GitHub,
+              the security standards used in ClickOnce prevented me from implementing the feature as I had envisioned. My second attempt was to 
+              create my own auto update system.
+            </p>
+            <p>
+              This second attempt created a library assembly that I was able to reference in the main code. This library used GitHub's API 
+              (Application Programming Interface) to fetch the latest release of the project (as seen under releases). It would then download
+              and unzip the zip file tied to the release and overwrite the currently installed version. This however presented a very clear
+              security vulnerability called a zip-slip, where an attacker would use the unzip method to insert malicious programs or code
+              to the host's file system (<a href="https://snyk.io/research/zip-slip-vulnerability" style="color:cadetblue" target="_blank">documented here</a>).
+            </p>
+            <p>
+              I prevent this by checking if any of the files do not start with the extraction destination. If any file fails this check, 
+              I throw an error informing the user that the update failed due and to alert me so I can send a new update. Otherwise,
+              when the user closes the creator, the update library will overwrite the current installation with the downloaded update.
+              Because I save all of the user's data in external files, the user's data will not be lost when the update occurs.
+            </p>
+            <p>
+              I am currently researching and testing ways to make this method safer, less data intensive, and more robust. 
+            </p>
+
+            <h4>Saving and Loading</h4>
+            <p>
+              An important feature of most applications is saving and loading the save states of the user and my application was no exception.
+              I decided on serializing the created character's data to a file, specifically in JSON (JavaScript Object Notation) for easy readability
+              and extensibility. However, creating a simple text file visible to the user would be confusing and lead to many corrupted characters
+              as users attempted to modify the file's data. To prevent this, I save the file as a .hro file, so many potential users will be discouraged
+              from modifying the data. Additionally, the application saves a backup character to a file created when the program is first installed.
+            </p>
+            <p>
+              When my application loads a character (either from the file system or from the backup) the character is immediately loaded into the 
+              'print character' screen. As of the current version of the application, the user cannot change aspects of the character after the initial
+              save, they can only print previously created characters.
+            </p>
+
+            <h4>Homebrew</h4>
+            <p>
+              One of the features that I thought was important for the user to create and share their own homebrew. This was implemented in a very
+              similar way to the saving and loading of the user's character. I created a menu where the user can create either a race, class, or 
+              background that might fit their character better than the ones implemented at the time. The user's homebrewed selection would then
+              be saved in the JSON format and would be loaded into the creator when they next opened the window. Once again, to prevent the user
+              from modifying the data, I changed the file type to a .brew file.
+            </p>
+            <p>
+              Once the homebrew has been exported to a file on the user's desktop, they can then share their homebrew with who they wish. On importing
+              the data, all homebrew in the file is added to the user's options. As some users don't want to use homebrew options in certain conditions,
+              I implemented a setting that would add or remove the user's homebrew database when toggled on or off.
+            </p>
+
+            <h4>Printing</h4>
+            <p>
+              This was the second hardest feature to implement as Visual Studio does not have a built in feature allowing me to print the current screen.
+              Instead, I used the built in graphics API to take capture the current state of the screen. This would then temporarily store the screen as 
+              a bitmap that I could then use to print the formatted sheet. To print the sheet, I used the PrintPreview control that Visual Studio provides
+              and draw the bitmap created from the graphics API onto the page. The result could then be printed by the user.
+            </p>
           </div>
       </div>
   </div>
   <footer>
-    <div class="Footer" style="top:100%">&#169; 2022 The-Architect01</div>
+    <div class="Footer" style="top:0%">&#169; 2022 The-Architect01</div>
   </footer>
   </body>
 </html>
