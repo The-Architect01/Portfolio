@@ -1,4 +1,6 @@
-$(document).ready(function() {$('body').bind('cut copy paste', function(event) {event.preventDefault();}); });
+$(document).ready(function() {
+    $('body').bind('cut copy paste', function(event) {event.preventDefault();});
+});
 $(document).bind("contextmenu",function(e){ return false; });
 
 function LoadTemplate(){

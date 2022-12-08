@@ -29,11 +29,22 @@
   </div>
   <a class="openbtn" onclick="OpenNav()"><div id="MenuOpen" style="display:inline">Menu</div> &#9776;</a>
     
-  <div class="Body">
+  <div class="Body" style="min-height:auto; height: auto;margin: 0 0 0 0;">
       <!--Content-->
       <h1 style="font-size:50px;padding-left:50px;"><a href="#top">About Me</a></h1>
-      <div class="Content" style="margin-top:25px;padding-left:25px;min-height: 100%;">
-        <div id="ContentFF" class="ff" sticky="True" style="width:22%">
+      <div class="Content" style="margin-top:25px;padding-left:25px;min-height: 100%; position:absolute;align-items: center;">
+        <div>
+          <div>
+            <img src="Assets/Icon_Draft.png" 
+            style="float:left;width:25%;padding-left:50px;padding-right:25px;padding-bottom:25px;z-index: 2;">
+            <p>Hi! I'm The-Architect01!</p>
+            <p>I am currently studing Computer Science and Data Science at Purdue University Fort Wayne. I currently work at Science Central.</p>
+            <p>I originally got started in programming through Excel in my junior year of High School. 
+              I developed a D&D character formatter which introduced me to Excel's data validation, and VBA. In school, I learned Java and expanded into C# and Unity.
+            </p>
+            <p>So far I have specialized in game development primarily in Visual Basic and in C#, though I am eager to learn new languages and find new avenues.</p>
+          </div>
+        <div id="ContentFF" class="ff" style="right: 15px;position:absolute;">
           <div class="Title">Fast Facts</div>
           <table>
             <tr><div class="TableHeader"><b>College Year: </b>Junior</div></tr>
@@ -42,53 +53,46 @@
             <tr><div class="TableHeader"><b>Skills: </b>C#, Java, Excel, MS Office</div></tr>
             <tr><div class="TableHeader" style="border-bottom:none"><b>Social: </b>
             <tr><a href="https://github.com/The-Architect01" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
-                <img src="Assets/GitHub-Mark-120px-plus.png" style="width:30px;height:30px;vertical-align:middle;padding-bottom:10px;">  GitHub</a></tr>        
+                <img src="Assets/GitHub-Mark-120px-plus.png" style="width:30px;height:30px;vertical-align:middle;padding-bottom:10px;">  GitHub</a></tr>   <br> 
+            <tr><a href="https://www.linkedin.com/in/neal-birchfield-69a641258/" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
+                <img src="Assets/LI-In-Bug.png" style="height:30px;vertical-align:middle;padding-bottom:10px;">  LinkedIn</a></tr>   
             </table>
         </div>
+        <div style="padding-top: 100px;width:50%;position:static;">
+          <section id="Contact Me">
+            <h2 style="padding-left:40px">Contact Me</h2>
+            <section id="UserForm" class="UserForm" style="top:0%;">
+            <form class="InputForm" name="inputForm" id="inputForm" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdRcBh7dSpFbf0IG2Ml3k_f3-PPIu3dmNGZVhXKTCrcp2Ysiw/formResponse?" target="hiddeniframe" onsubmit="submitted=true;">
+              <div class="inputs">
+                <input type="text" placeholder="Name" name="entry.2005620554" id="entry.2005620554" class="Input">
+                <input type="text" placeholder="Email" name="entry.1092508711" id="entry.1092508711" class="Input">
+                <input type="text" placeholder="Preferred Pronouns" name="entry.1994019312" id="entry.1994019312" class="Input">
+                <div id="ErrorText" class="Error">You didn't enter a valid email!</div>  
+              </div>  
+              <div class="msg">
+                <textarea placeholder="Message" name="entry.839337160" id="entry.839337160" class="Input"></textarea>
+                <input type="submit" class="Buttons" value="Submit" class="Button" onpointerenter="AnimateHover(this,1)" onpointerleave="AnimateHover(this,0)" onclick="Submit()">
+              </div>
+            </form>
+            <div id="Thanks" style="display: none; padding-left:50px; font-size:18px;">Thanks for reaching out to me! I'll try to respond soon!</div>
+            <iframe name="hiddeniframe" id="hiddeniframe" style="display:none" onload="if(submitted){}"></iframe>
+            </section> 
+          </section>
+          
+        </div>
+        
+        </div>
+        <footer>
+          <div class="Footer" style="width: 105%;top:100%;position: relative;margin-left:-25px;margin-top:90px">&#169; 2022 The-Architect01</div>
+      </footer> 
       </div>
-      <div>
-        <div style="min-height: 450px;">
-        <img src="Assets/Icon_Draft.png" 
-        style="float:left;width:25%;padding-left:50px;padding-right:25px;padding-bottom:25px;">
-        <p>Hi! I'm The-Architect01!</p>
-        <p>I am currently studing Computer Science and Data Science at Purdue University Fort Wayne. I currently work at Science Central.</p>
-        <p>I originally got started in programming through Excel in my junior year of High School. 
-          I developed a D&D character formatter (I have since updated this, found 
-          <a style="color:cadetblue;" href="Projects/Personal/playermaker/playermaker.html">here</a>) 
-          which introduced me to Excel's data validation, and VBA. In school, I learned Java and expanded into C# and Unity.
-        </p>
-        <p>So far I have specialized in game development primarily in Visual Basic and in C#, though I am eager to learn new languages and find new avenues.</p>
-      </div>
+
     </div>
-    <div style="padding-top: 25px;">
-      <section id="Contact Me">
-        <h2 style="padding-left:40px">Contact Me</h2>
-        <section id="UserForm" class="UserForm">
-        <form class="InputForm" name="inputForm" id="inputForm" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdRcBh7dSpFbf0IG2Ml3k_f3-PPIu3dmNGZVhXKTCrcp2Ysiw/formResponse?" target="hiddeniframe" onsubmit="submitted=true;">
-          <div class="inputs">
-            <input type="text" placeholder="Name" name="entry.2005620554" id="entry.2005620554" class="Input">
-            <input type="text" placeholder="Email" name="entry.1092508711" id="entry.1092508711" class="Input">
-            <input type="text" placeholder="Preferred Pronouns" name="entry.1994019312" id="entry.1994019312" class="Input">
-            <div id="ErrorText" class="Error">You didn't enter a valid email!</div>  
-          </div>  
-          <div class="msg">
-            <textarea placeholder="Message" name="entry.839337160" id="entry.839337160" class="Input"></textarea>
-            <input type="submit" class="Buttons" value="Submit" class="Button" onpointerenter="AnimateHover(this,1)" onpointerleave="AnimateHover(this,0)" onclick="Submit()">
-          </div>
-        </form>
-        <div id="Thanks" style="display: none; padding-left:50px; font-size:18px;">Thanks for reaching out to me! I'll try to respond soon!</div>
-        <iframe name="hiddeniframe" id="hiddeniframe" style="display:none" onload="if(submitted){}"></iframe>
-        </section> 
-      </section>
-    </div>
-    </div>
-    <footer>
-        <div class="Footer" style="top:100%">&#169; 2022 The-Architect01</div>
-    </footer> 
+    
     <style>
       p {
         padding-top:5px;
-        width:60%;
+        width:55%;
         padding-left: 25px;
       }
     </style>
