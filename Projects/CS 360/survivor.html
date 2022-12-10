@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="../project.css">
     <script src="../project.js"></script>
   </head>
-  <body style="background:url('Data/TotalDramaIsland.png') center fixed no-repeat;background-size:140%;width:100%">
+  <body style="background:url('Data/TotalDramaIsland.png') center fixed;background-size:140%;width:100%">
   <!-- Side navigation -->
   <div id = "CustomSideNav" class="Sidenav">
     <a class="closebtn" onclick="CloseNav()">&times;</a>
@@ -81,7 +81,7 @@
       </div>
     </div>
       <!--Content-->
-      <div class="Content" style="margin-top: 200px;">
+      <div class="Content" style="margin-top: 225px;">
         <div id="ContentBody">
           <h1 class="header" id="ContentHeader" sticky="True">CS 360 Project - Keep Body and Soul Together-er</h1>
           <div id="ContentFF" class="ff" sticky="True">
@@ -94,22 +94,131 @@
               <tr><div class="TableHeader"><b>Language: </b>C#</div></tr>
               <div style="padding:5px"></div>
               <a href="https://github.com/SuddenDeath42/CS-360-Project/releases/" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
-                <img src="../../Assets/Download.png" style="width:30px;height:30px;vertical-align:middle;">  Download</a>
+                <img src="../../Assets/Download.png" style="width:30px;height:30px;vertical-align:middle;">  Download v1</a>
               <div style="padding:5px"></div>
               <a href="https://github.com/SuddenDeath42/CS-360-Project" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
-                <img src="../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;">  GitHub</a>
+                <img src="../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;">  GitHub v1</a>
               <div style="padding:5px"></div>
               <a href="https://brickshudson.github.io/CS-360-Project/" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
-                <img src="../../Assets/Play2.png" style="width:30px;height:30px;vertical-align:middle;">  Play</a>
+                <img src="../../Assets/Play2.png" style="width:30px;height:30px;vertical-align:middle;">  Play v1</a>
               <div style="padding:5px"></div>
               <!--<a href="../projects.html" target="_blank" style="padding-left:15px;text-decoration:none;font-size:22px;">
                 <img src="../../Assets/ExternalLink.png" style="width:30px;height:30px;vertical-align:middle;">  GitHub</a>
               <div style="padding:5px"></div>-->
             </table>
           </div>
-          <h2>Project Summary</h2>
-            <p></p>
-          <h2></h2>
+          <div id="ContentFF">
+            <style>
+              h3 {
+                padding-left: 35px;
+                font-size: 24px;
+                font-style: normal;
+              }
+              h4 {
+                padding-left: 35px;
+                font-size: 20px;
+                font-style: italic;
+              }
+            </style>
+            <h2>Project Summary</h2>
+            <p>
+              This game was created for my software development class. In the class, we were tasked to develop a project through the course of an entire
+              semester. To help with such a large project, we were split up into different teams, with this project recieving a total of 5 members.
+              I was elected the leader of the group and lead development of the project.
+            </p>
+            <p>
+              For our project, we knew that we wanted to create a video game. However, one of the requirements was to make it computer science themed.
+              To do this, we decided on a minigame based educational game that taught players how various data structures operated. We took heavy inspiration
+              from the Mario Party and Survivor franchises in how we envisioned the game play. We decided to attempt to implement the following features:
+              <ul>
+                <li>Interactive Minigames</li>
+                <li>Dynamic Menus</li>
+                <li>Menus</li>
+                <li>Multiplayer</li>
+                <li>Gameboard</li>
+              </ul>
+            </p>
+            <p>
+              We divided the group as follows, each person took one goal to work on:
+              <ul>
+                <li>Interactive Minigames and Save Data (Me)</li>
+                <li>Dynamic Menus (<a href="https://github.com/brickshudson" style="color:cadetblue" target="_blank">Bricks Hudson</a>)</li>
+                <li>Menus and Sound (<a href="https://github.com/ericminick25" style="color:cadetblue" target="_blank">Eric Minic</a>)</li>
+                <li>Multiplayer (<a href="https://github.com/RonitPatelPFW" style="color:cadetblue" target="_blank">Ronit Patel</a>)</li>
+                <li>Gameboard (<a href="https://github.com/DelagrangeTyler" style="color:cadetblue" target="_blank">Tyler Delegrange</a>)</li>
+              </ul>
+            </p>
+            <p>
+              I will be focusing only on the parts that I worked on below, if your are curious about how other aspects of the game work please refer
+              to our <a href="https://github.com/brickshudson/CS-360-Project/blob/main/Ancient%20Text/Ancient%20Text.pdf" style="color:cadetblue" target="_blank">Documentation</a>
+              (lovingly called 'The Ancient Text' because of how large it was). Tyler named our project 'Keep Body and Soul Together-er' as a parody of 
+              the definition of survive. I am currently working on version 2.0 of the project seen in the splash images.
+            </p>
+            
+            <h3>Features</h3>
+
+            <h4>Arrays Attack!</h4>
+            <p>
+              
+            </p>
+
+            <h4>We Call It Maze</h4>
+            <p>
+              In this minigame a player is navigating a randomly generated binary search tree looking for a specific value displayed as the Goal.
+              The player should complete the search in as little moves as possible and within the given time span of 90 seconds (though it will likely be a lot faster).
+            </p>
+            <p>
+              The player is allowed to go in three directions; up, left, right. Selecting a direction will consume a move.
+              Up takes the player to the current node’s parent; left sets the current node to its left child; right sets the current node to its right child.
+              The player wins if they select the correct node, and the player loses if they fail to select the correct node in the given time span.
+            </p>
+
+            <h4>Pointer Panic</h4>
+            <p>
+              In this minigame a player is exploring how pointers are unique memory addresses used by software. The player’s goal is to identify as many 
+              ‘pointers’ as they can without making a mistake in the given time span of 90 seconds.
+            </p>
+            <p> 
+              The player clicks on one of three randomly generated ‘pointers’ with the hint ‘pointer’ showing the correct ‘pointer’ with a few distortions. 
+              The game randomly generates a different ‘pointer’ for every correct answer and ends if the time runs out or the player clicks the incorrect pointer.
+            </p>
+
+            <h4>Manic Menus</h4>
+            <p>
+              In this minigame a player is using only Queue behaviors (Dequeue, Enqueue, and FIFO [First In, First Out]) to sort a menu into the correct way as
+              denoted in the Goal Menu. The player is allowed to dequeue items into two temporary cells (representing variables) or into a different menu. For 
+              the player to win, either Menu 1 or Menu 2 need to match exactly the Goal Menu in the given time span of 90 seconds.
+            </p>
+
+            <h4>Robbie's Revenge</h4>
+            <p>
+              In this minigame a player is using their memory to understand the set concept of individuality. 
+              The player wants to get as many unique values as they can without repeating themselves or Robbie the robot.
+            </p>
+            <p>
+              The player must input a value that matches the given category and must not have been previously entered by either the player or Robbie. 
+              To win, the player must last the full duration of the time span of 90 seconds without repeating a value. The game is possible to end early 
+              if Robbie enters an incorrect entry, determined by Robbie's Difficulty rating.
+            </p>
+
+            <h4>Towers of Hanoi</h4>
+            <p>
+              In this minigame a player is using only Stack behaviors (Dequeue, Enqueue, and LIFO [Last In, First Out]) to get the starting tower to the
+              furthest right column in the given time span of 90 seconds.
+            </p>
+            <p>
+              The player is allowed to dequeue items from the top of one stack and enqueue the item into one of the other stacks given that the item is 
+              smaller than the one below it. If the item is larger than the item below, the move is canceled. 
+            </p>
+
+            <h4>Documentation</h4>
+            <p>
+              I lead the design and creation of the over 60 page documention of our project, writing around 50 pages pf the document.
+              I did my best to describe the functionality of each class I wrote, allowing future project members to pick up where I left
+              off and understand how each part of the whole works.
+            </p>
+
+          </div>
         </div>
       </div>   
   </div>

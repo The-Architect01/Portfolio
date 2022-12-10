@@ -81,7 +81,7 @@
     margin-top: 725px;
     min-width: 80%;
     height:100%;
-    padding-bottom:50%;
+    padding-bottom:50px;
     padding-left:3%;
     padding-right:3%;
     padding-top:2.5%;
@@ -95,7 +95,7 @@
     margin-right:10%;
     margin-bottom:10px;
     transition:.3s;
-    margin-left:50%;
+    margin-left:10px;
     top:45px;
     background: #7FC0C6;
     border: 5px solid black;
@@ -155,6 +155,9 @@ p {
     padding-right: 25px;
     font-size: 18px;
     width: 60%;
+}
+ul {
+    padding-left:75px;
 }
 
 /*Inputs*/
