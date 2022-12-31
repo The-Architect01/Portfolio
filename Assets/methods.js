@@ -3,16 +3,26 @@ $(document).ready(function() {
 });
 $(document).bind("contextmenu",function(e){ return false; });
 
-function LoadTemplate(){
-    var request = new XMLHttpRequest();
-    request.open('GET', "https://the-architect01.github.io/Portfolio/Assets/template.html", false);
-    request.onreadystatechange= function() {
-      if (this.readyState !== 4 || this.status !== 200) return;
-      document.getElementById('TemplateHeader').innerHTML += this.responseText;
-    };
-    request.send();
 
-    document.getElementById("TemplateHeader").removeAttribute("id");
+var Header = "";
+
+function LoadTemplate(){
+    /*try {
+        var request = new XMLHttpRequest();
+        request.open('GET', "https://the-architect01.github.io/Portfolio/Assets/template.html", false);
+        request.onreadystatechange= function() {
+            if (this.readyState !== 4 || this.status !== 200) return;
+            document.getElementById('TemplateHeader').innerHTML += this.responseText;
+        };
+        request.send();
+    } catch {*/
+    var elements = document.getElementsByClassName("Template")[0];
+    for (var i = 0; i<elements.length; i++); {
+  //      elements[i].innerHTML += Reflect.get(this, elements[i].id);
+        elements[i].removeAttribute("class");
+        elements[i].removeAttribute("id");
+    }
+//    document.getElementById("TemplateHeader").removeAttribute("id");
 }
 
 var submitted=false;

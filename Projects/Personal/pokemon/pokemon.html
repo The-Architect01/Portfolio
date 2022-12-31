@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+  <head class="Template" id="Header">
     <!--Font Imports-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,7 +82,7 @@
             <table>
               <tr><div class="TableHeader"><b>Project Type: </b>Personal</div></tr>
               <tr><div class="TableHeader"><b>Development: </b>Agile</div></tr>
-              <tr><div class="TableHeader"><b>Time Taken: </b>2021 -</div></tr>
+              <tr><div class="TableHeader"><b>Time Taken: </b>2020 -</div></tr>
               <tr><div class="TableHeader"><b>Engine: </b>Unity</div></tr>
               <tr><div class="TableHeader"><b>Language: </b>C#</div></tr>
               <div style="padding:5px"></div>
@@ -109,39 +109,53 @@
             </style>
             <h2>Project Summary</h2>
             <p>
-              I originally started this project as an Excel spreadsheet to help me create D&D characters. I added a lot of features to this original
-              draft of the project, but this quickly made the spreadsheet unmanageable and hard to use. Luckily, I was exploring C# in Visual Studio
-              and decided to update the project to be more usable and eventually sharable.
+              When I started playing Pokémon Sword in 2019, I was just learning how to make more complex computer programs. So, as I was playing
+              the game, I started to analyse how the game was put together and how those pieces interacted. After breaking down those large problems
+              into more manageable problems, I realized that I knew how to solve some of those smaller problems by using techniques that I was learning
+              in my schoolwork and personal experimentation. I have been a fan of the games for a while now, desipite Pokémon Let's Go Pikachu (2018) was
+              my first game I played, and have wondered how I would go about writing a Pokémon game. That's when the idea hit me, I could try to create my
+              own Pokémon game!
             </p>
+            <p>
+              I started first by brainstorming where I would like my fan game would take place as this would determine what Pokémon I would choose to include
+              in my Pokédex and other core mechanics. As I was ultimately decided on a region based on the lore and lands of Scandinvia. As this was my
+              first full sized game, I decided to start on a Pokédex of 251 Pokémon, similar in size to the generation 2 games in the series. 
+            </p>
+            <p>
+              <a id="5HoursLater"></a> years later and I am still working on this project. It has gone through many different iterations, and three different formats.
+              The many different iterations that I have gone through have taught me a lot about programming and game development as a whole.
+            </p>
+            <script>
+              var now = new Date();
+              var year = now.getUTCFullYear();
+              var type = year-2020;
+              document.getElementById("5HoursLater").innerHTML = `${type}`;
+            </script>
 
             <h3>Features</h3>
 
-            <h4></h4>
+            <h4>Pokémon</h4>
             <p>
-              <br>
-              <br>
-              <br>
+              Arguably the most important aspect of the series, I spent a long time getting the Pokémon to work and which ones I wanted to include in the
+              region. I also wanted to include some high quality fakémon to include in the region. However, I am not a very good artist, but I was able to
+              find some very high quality ones as part of the <a href="https://www.smogon.com/cap/" style="color:cadetblue" target="_blank">Create-A-Pokémon Project</a> hosted by Smogon.
             </p>
 
-            <h4></h4>
-            <p>
-
-            </p>
-
-            <h4></h4>
+            <!--<h4>Pokédex</h4>
             <p>
 
             </p>
 
-            <h4></h4>
+            <h4>Trainers</h4>
             <p>
 
             </p>
 
-            <h4></h4>
+            <h4>Story</h4>
             <p>
 
-            </p>
+            </p>-->
+
           </div>
         </div>
       </div>   

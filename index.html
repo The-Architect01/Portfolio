@@ -48,7 +48,7 @@
 <script>
   var now = new Date();
   var hours = now.getHours();
-  if (5 <= hours && hours < 17) { var type = "Bonjour."; }
-  else if (17 <= hours || hours < 5) { var type = "Bonsoir."; }
+  if (6 <= hours && hours < 18) { var type = "Bonjour."; }
+  else if (18 <= hours || hours < 6) { var type = "Bonsoir."; }
   document.getElementById("time").innerHTML = `${type}`;
 </script>
